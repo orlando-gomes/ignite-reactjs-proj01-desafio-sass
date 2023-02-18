@@ -1,0 +1,38 @@
+@use '../variables'
+  
+div 
+  input 
+    appearance: none
+    
+    
+    cursor: pointer
+    height: 1.25rem
+    width: 1.25rem
+    border-radius: 50%
+    border: 2px solid variables.$blue
+
+    transition: background-color 0.1s
+    transition: border-color 0.1s
+
+    &:hover
+      border-color: variables.$blue-dark
+      /* --blue-dark with 0.2 opacity */
+      background-color: rgba(30, 111, 159, 0.2)
+
+ 
+    &.checked 
+      border-color: variables.$purple-dark
+      background-color: variables.$purple-dark
+
+      &:hover 
+        border-color: variables.$purple
+        background-color: variables.$purple
+ 
+
+      &::before 
+        content: "\2714"
+        font-size: 0.8rem
+        color: variables.$gray-100
+        position: relative
+        left: 0.18rem
+        bottom: 0.125rem

@@ -1,0 +1,43 @@
+@use '../variables1';
+  
+.container {
+  display: flex;
+  align-items: flex-start;
+  min-height: 4.5rem;
+  padding: 1rem;
+
+  background-color: variables1.$gray-400;
+  border-radius: 8px;
+
+  color: variables1.$gray-100;
+  font-size: 0.875rem;
+
+  & > button {
+    background-color: transparent;
+    border: 0;
+    color: variables1.$gray-300;
+    cursor: pointer;
+
+    transition: color 0.1s; 
+
+    &:hover {
+      color: variables1.$danger;
+    }
+       
+  }
+}
+.content {
+  margin: 0 0.75rem;
+  width: 100%;
+}
+
+
+
+.contentChecked {
+  margin: 0 0.75rem;
+  width: 100%;
+  color: variables1.$gray-300;
+  text-decoration: line-through;
+}
+
+

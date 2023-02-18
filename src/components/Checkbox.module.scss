@@ -1,0 +1,44 @@
+@use '../variables1';
+  
+div {
+  input {
+    appearance: none;
+    
+    
+    cursor: pointer;
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    border: 2px solid variables1.$blue;
+
+    transition: background-color 0.1s;
+    transition: border-color 0.1s;
+
+    &:hover {
+      border-color: variables1.$blue-dark;
+      /* --blue-dark with 0.2 opacity */
+      background-color: rgba(30, 111, 159, 0.2);
+    }
+
+ 
+    &.checked {
+      border-color: variables1.$purple-dark;
+      background-color: variables1.$purple-dark;
+
+      &:hover {
+        border-color: variables1.$purple;
+        background-color: variables1.$purple;
+      }
+
+      &::before {
+        content: "\2714";
+        font-size: 0.8rem;
+        color: variables1.$gray-100;
+        position: relative;
+        left: 0.18rem;
+        bottom: 0.125rem;
+      }
+
+    }
+  }
+}

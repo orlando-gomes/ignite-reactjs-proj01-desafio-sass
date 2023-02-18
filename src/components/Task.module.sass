@@ -1,0 +1,37 @@
+@use '../variables'
+  
+.container 
+  display: flex
+  align-items: flex-start
+  min-height: 4.5rem
+  padding: 1rem
+
+  background-color: variables.$gray-400
+  border-radius: 8px
+
+  color: variables.$gray-100
+  font-size: 0.875rem
+
+  & > button
+    background-color: transparent
+    border: 0
+    color: variables.$gray-300
+    cursor: pointer
+
+    transition: color 0.1s 
+
+    &:hover
+      color: variables.$danger   
+
+
+.content 
+  margin: 0 0.75rem
+  width: 100%
+
+
+.contentChecked 
+  margin: 0 0.75rem
+  width: 100%
+  color: variables.$gray-300
+  text-decoration: line-through
+

@@ -1,0 +1,160 @@
+@use 'variables1';
+@use 'mixins1';
+  
+.wrapper {
+  @include mixins1.centralized-column;
+}
+
+
+
+.wrapper {
+  header {
+    background: variables1.$gray-700; 
+    width: 100%;
+    height: 200px;
+    @include mixins1.centralized-row;
+
+    img {
+      margin-right: 0.75rem;
+      height: 2.25rem;
+    }
+
+    span {
+      font-size: 2.5rem;
+      color: variables1.$blue ;
+      font-weight: 700;
+
+      & + span {
+        color: variables1.$purple-dark;
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1.69rem;
+    max-width: 736px;
+  }
+}
+
+
+.newTask {
+  width: 46rem;
+ 
+  form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+ 
+  input {
+    width: 39.875rem;
+    height: 3.375rem;
+    background-color: variables1.$gray-500;
+    border: 1px solid variables1.$gray-700;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: default;
+    color: variables1.$gray-100; 
+
+    &::placeholder {
+      color: variables1.$gray-300;
+    }
+    
+    
+    &:hover {
+      background-color: variables1.$gray-500; 
+      border: 1px solid variables1.$gray-700;
+    }
+ 
+  }
+        
+  button {
+    background-color: variables1.$blue-dark; 
+    color: variables1.$gray-100; 
+    height: 3.25rem;
+    width: 5.625rem;
+    border: 0;
+    border-radius: 8px;
+    font-size: 0.875rem; 
+
+    transition: background-color 0.1s;
+    @include mixins1.centralized-row;
+
+    &:hover {
+      background-color: variables1.$blue;
+    }    
+
+   
+    div {
+      display: flex;
+    }
+
+
+    span {
+      display: flex;
+      justify-content: center;
+    
+      & + span {
+        margin-left: 0.5rem;
+      }
+        
+    }
+  }
+}
+
+.tasksInfo {
+  width: 46rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+
+
+  & > div:first-child {
+    display: flex;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: variables1.$blue; 
+
+
+    span + span {
+      @include mixins1.centralized-row;
+      font-size: 0.75rem;
+      color: variables1.$gray-200; 
+      margin-left: 0.5rem;
+      background-color: variables1.$gray-400; 
+      width: 1.5rem;
+      height: 1.19rem;
+      border-radius: 8px;
+    }
+  }
+
+  div + div {
+    display: flex;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: variables1.$purple; 
+
+    span + span {
+      @include mixins1.centralized-row;
+      font-size: 0.75rem;
+      color: variables1.$gray-200; 
+      margin-left: 0.5rem;
+      background-color: variables1.$gray-400; 
+      width: 3.25rem;
+      height: 1.19rem;
+      border-radius: 8px;
+    }
+  }
+}
+
+.tasksList {
+  article + article {
+    margin-top: 0.75rem;
+  }
+
+}
+
